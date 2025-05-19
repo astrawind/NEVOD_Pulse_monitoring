@@ -3,22 +3,20 @@ global:
 
 scrape_configs:
 
-
-
   - job_name: 'clean_zone'
     scrape_interval: 60s
     metrics_path: '/clean_zone/v1/metrics/'
     static_configs:
-      - targets: ['172.17.0.1:8082']
+      - targets: ['api.nevod.mephi.ru']
 
   - job_name: 'high_voltage'
     scrape_interval: 300s
     metrics_path: '/high_voltage/v1/metrics/'
     static_configs:
-      - targets: ['172.17.0.1:8082']
+      - targets: ['api.nevod.mephi.ru']
 
   - job_name: 'eas'
     scrape_interval: 60s
     metrics_path: '/eas/v1/metrics/'
     static_configs:
-      - targets: ['172.17.0.1:8082']
+      - targets: ['api.nevod.mephi.ru']
